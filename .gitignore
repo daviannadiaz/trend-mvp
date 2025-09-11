@@ -1,0 +1,31 @@
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+
+# Virtualenv
+venv/
+ENV/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints
+
+# OS
+.DS_Store
+
+# Data files (don't commit large raw CSVs)
+data/*.csv
+data/*.xlsx
+data/*.zip
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+EOF
