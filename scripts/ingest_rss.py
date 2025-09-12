@@ -1,7 +1,7 @@
 # scripts/ingest_rss.py
 import requests, feedparser, pandas as pd
 from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timezone  # <-- updated
 import hashlib
 import os
 
@@ -46,14 +46,12 @@ for feed_url in rss_feeds:
 
     for entry in feed.entries:
         title = entry.get("title", "")
-        # try multiple fields for summary / content
         summary_raw = entry.get("summary") or entry.get("description") or ""
-        # clean html
         summary = BeautifulSoup(summary_raw, "html.parser").get_text(separator=" ").strip()
         link = entry.get("link", "")
-        ingested_at = datetime.utcnow().isoformat()
+        ingested_at = datetime.now(timezone.utc).isoformat()  # <-- timezone-aware UTC
 
-        # make a simple dedupe key (link if present, else hash of title+summary)
+        # dedupe key
         if link:
             key = link
         else:
@@ -70,14 +68,13 @@ for feed_url in rss_feeds:
             if kw.lower() in text_lower:
                 matched.append(kw)
 
-        # try to get image url if present (media content or img in summary)
+        # try to get image url if present
         image_url = ""
         if entry.get("media_content"):
             mc = entry.get("media_content")
             if isinstance(mc, list) and mc:
                 image_url = mc[0].get("url", "")
         if not image_url:
-            # find first img tag in raw html summary
             soup = BeautifulSoup(entry.get("summary", ""), "html.parser")
             img = soup.find("img")
             if img and img.get("src"):
@@ -92,10 +89,11 @@ for feed_url in rss_feeds:
             "image_url": image_url
         })
 
-# save timestamped
+# save timestamped CSV
 df = pd.DataFrame(all_entries)
 os.makedirs("data", exist_ok=True)
-timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")  # <-- timezone-aware
 csv_path = f"data/rss_results_{timestamp}.csv"
 df.to_csv(csv_path, index=False)
 print("Saved", csv_path)
+
