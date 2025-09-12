@@ -1,10 +1,10 @@
-import requests
-import feedparser
-import pandas as pd
+# scripts/ingest_rss.py
+import requests, feedparser, pandas as pd
 from bs4 import BeautifulSoup
-from datetime import datetime  # <-- add this
+from datetime import datetime
+import hashlib
+import os
 
-# Step 1: list of RSS feeds to collect from
 rss_feeds = [
     "https://www.businessoffashion.com/arc/outboundfeeds/rss/?outputType=xml",
     "https://www.vanityfair.com/feed/rss",
@@ -27,56 +27,75 @@ rss_feeds = [
     "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain"
 ]
 
-# Step 2: load your keywords
-keywords_df = pd.read_csv("data/seed_keywords.csv")
+keywords_df = pd.read_csv("data/seed_keywords.csv")  # columns: category,keyword
+keywords = list(keywords_df['keyword'])
 
-# ✅ Debug line: show what keywords we’re actually checking
-print("Checking keywords:", list(keywords_df['keyword']))
-
-# Step 3: create an empty list to store results
 all_entries = []
+seen_hashes = set()
 
-# Step 4: go through each RSS feed with requests + feedparser
 headers = {'User-Agent': 'Mozilla/5.0'}
 
 for feed_url in rss_feeds:
-    print(f"\nParsing feed: {feed_url}")
-    
     try:
-        response = requests.get(feed_url, headers=headers, timeout=10)
-        response.raise_for_status()
-        feed = feedparser.parse(response.content)
+        resp = requests.get(feed_url, headers=headers, timeout=10)
+        resp.raise_for_status()
+        feed = feedparser.parse(resp.content)
     except Exception as e:
-        print(f"❌ Failed to fetch feed: {e}")
+        print("Failed to fetch:", feed_url, e)
         continue
-    
-    print("Feed status:", response.status_code)
-    print("Number of entries:", len(feed.entries))
-    print("First 5 article titles:", [entry.get("title", "") for entry in feed.entries[:5]])
-    
+
     for entry in feed.entries:
         title = entry.get("title", "")
-        summary = entry.get("summary", "")
-        summary_text = BeautifulSoup(summary, "html.parser").get_text()
-        summary_text = summary_text[:200] + "..." if len(summary_text) > 200 else summary_text
+        # try multiple fields for summary / content
+        summary_raw = entry.get("summary") or entry.get("description") or ""
+        # clean html
+        summary = BeautifulSoup(summary_raw, "html.parser").get_text(separator=" ").strip()
         link = entry.get("link", "")
-        
-        matched_keywords = []
-        for kw in keywords_df['keyword']:
-            if kw.lower() in title.lower() or kw.lower() in summary_text.lower():
-                matched_keywords.append(kw)
-        
-        if matched_keywords:
-            all_entries.append({
-                "title": title,
-                "summary": summary_text,
-                "link": link,
-                "matched_keywords": ", ".join(matched_keywords)
-            })
+        ingested_at = datetime.utcnow().isoformat()
 
-# Step 5: save to CSV with timestamp
+        # make a simple dedupe key (link if present, else hash of title+summary)
+        if link:
+            key = link
+        else:
+            key = hashlib.sha1((title + summary).encode("utf-8")).hexdigest()
+
+        if key in seen_hashes:
+            continue
+        seen_hashes.add(key)
+
+        # basic keyword matching
+        matched = []
+        text_lower = f"{title} {summary}".lower()
+        for kw in keywords:
+            if kw.lower() in text_lower:
+                matched.append(kw)
+
+        # try to get image url if present (media content or img in summary)
+        image_url = ""
+        if entry.get("media_content"):
+            mc = entry.get("media_content")
+            if isinstance(mc, list) and mc:
+                image_url = mc[0].get("url", "")
+        if not image_url:
+            # find first img tag in raw html summary
+            soup = BeautifulSoup(entry.get("summary", ""), "html.parser")
+            img = soup.find("img")
+            if img and img.get("src"):
+                image_url = img.get("src")
+
+        all_entries.append({
+            "title": title,
+            "summary": summary,
+            "link": link,
+            "matched_keywords": ", ".join(matched),
+            "ingested_at": ingested_at,
+            "image_url": image_url
+        })
+
+# save timestamped
 df = pd.DataFrame(all_entries)
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")  # e.g., 20250909_153045
-filename = f"data/rss_results_{timestamp}.csv"
-df.to_csv(filename, index=False)
-print(f"\n✅ RSS ingest complete! Results saved to {filename}")
+os.makedirs("data", exist_ok=True)
+timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+csv_path = f"data/rss_results_{timestamp}.csv"
+df.to_csv(csv_path, index=False)
+print("Saved", csv_path)
