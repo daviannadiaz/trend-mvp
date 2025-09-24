@@ -1,38 +1,57 @@
+# scripts/analyze_results.py
 import pandas as pd
 import matplotlib.pyplot as plt
+import glob
 import os
+from datetime import datetime
 
-# Check if the CSV exists
-if not os.path.exists("data/rss_results.csv"):
-    print("⚠️ No rss_results.csv file found. Run ingest_rss.py first.")
+# --- Step 1: Find latest tagged CSV ---
+tagged_files = sorted(glob.glob("data/rss_results_tagged_*.csv"))
+if tagged_files:
+    latest_file = tagged_files[-1]
+else:
+    latest_file = "data/rss_results_tagged.csv"
+
+if not os.path.exists(latest_file):
+    print("⚠️ No tagged RSS results file found. Run ingest_rss.py → tag_keywords.py first.")
     exit()
 
 try:
-    # Load the RSS results
-    df = pd.read_csv("data/rss_results.csv")
+    df = pd.read_csv(latest_file)
 except pd.errors.EmptyDataError:
-    print("⚠️ rss_results.csv is empty. Run ingest_rss.py with more feeds/keywords.")
+    print("⚠️ Tagged results file is empty. Run ingest_rss.py with more feeds/keywords.")
     exit()
 
-# If no rows, stop early
 if df.empty:
     print("⚠️ No results found. Try running ingest_rss.py with more feeds/keywords.")
     exit()
 
-# Split the matched_keywords column (because it can have multiple keywords per row)
-all_keywords = []
-for keywords in df["matched_keywords"].dropna():
-    for kw in keywords.split(", "):
-        all_keywords.append(kw)
+print("Using input file:", latest_file)
 
-# Count frequency
+# --- Step 2: Extract matched keywords ---
+all_keywords = []
+if "matched_keywords" in df.columns:
+    for keywords in df["matched_keywords"].dropna():
+        for kw in keywords.split(", "):
+            all_keywords.append(kw.strip())
+
+if not all_keywords:
+    print("⚠️ No matched keywords found in the dataset.")
+    exit()
+
 keyword_counts = pd.Series(all_keywords).value_counts()
 
-# Print to terminal
+# --- Step 3: Print to terminal ---
 print("\n📊 Keyword frequencies:")
 print(keyword_counts)
 
-# Plot a simple bar chart
+# --- Step 4: Export results ---
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+output_csv = f"data/keyword_frequencies_{timestamp}.csv"
+keyword_counts.to_csv(output_csv, header=["count"])
+print(f"\n✅ Keyword frequencies exported to {output_csv}")
+
+# --- Step 5: Plot bar chart ---
 plt.figure(figsize=(10, 5))
 keyword_counts.plot(kind="bar")
 plt.title("Trend Keyword Frequency")
