@@ -1,0 +1,102 @@
+section,metric,value
+summary,total_items,50
+top_words,leather,9
+top_words,bag,9
+top_words,dress,8
+top_words,coat,6
+top_words,tote,4
+top_words,print,4
+top_words,shoulder,4
+top_words,strap,3
+top_words,trousers,3
+top_words,detail,3
+top_words,jacket,3
+top_words,long,3
+top_words,sleeve,3
+top_words,pocket,2
+top_words,logo,2
+top_words,jeans,2
+top_words,sneakers,2
+top_words,belted,2
+top_words,high,2
+top_words,boots,2
+top_bigrams,tote bag,4
+top_bigrams,shoulder bag,3
+top_bigrams,long sleeve,3
+top_bigrams,double breasted,2
+top_bigrams,wave print,2
+top_bigrams,leather buttoned,1
+top_bigrams,buttoned coat,1
+top_bigrams,pocket logo,1
+top_bigrams,logo embossed,1
+top_bigrams,embossed tote,1
+top_bigrams,straight leg,1
+top_bigrams,leg jeans,1
+top_bigrams,snakeskin leather,1
+top_bigrams,leather sneakers,1
+top_bigrams,court belted,1
+top_bigrams,belted coat,1
+top_bigrams,dakota knee,1
+top_bigrams,knee high,1
+top_bigrams,high boots,1
+top_bigrams,polo bear,1
+top_designers,Acne Studios,8
+top_designers,Prada,6
+top_designers,Miu Miu,4
+top_designers,TOTEME,3
+top_designers,OUR LEGACY,2
+top_designers,ChloÃ©,2
+top_designers,Polo Ralph Lauren,2
+top_designers,Valentino Garavani,2
+top_designers,PUCCI,2
+top_designers,AlaÃ¯a,2
+items,Acne Studios | leather buttoned coat,https://www.farfetch.com/shopping/women/acne-studios-leather-buttoned-coat-item-29879551.aspx
+items,Miu Miu | Pocket logo-embossed tote bag,https://www.farfetch.com/shopping/women/miu-miu-pocket-logo-embossed-tote-bag-item-31082395.aspx
+items,OUR LEGACY | straight-leg jeans,https://www.farfetch.com/shopping/women/our-legacy-straight-leg-jeans-item-29542723.aspx
+items,Miu Miu | snakeskin-leather sneakers,https://www.farfetch.com/shopping/women/miu-miu-snakeskin-leather-sneakers-item-32044809.aspx
+items,OUR LEGACY | Court belted coat,https://www.farfetch.com/shopping/women/our-legacy-court-belted-coat-item-31990212.aspx
+items,ChloÃ© | Dakota knee-high boots,https://www.farfetch.com/shopping/women/chloe-dakota-knee-high-boots-item-31980195.aspx
+items,Polo Ralph Lauren | Polo Bear-embroidered crew-neck sweater,https://www.farfetch.com/shopping/women/polo-ralph-lauren-polo-bear-embroidered-crew-neck-sweater-item-31951427.aspx
+items,Calvin Klein | wrap-design leather skirt,https://www.farfetch.com/shopping/women/calvin-klein-wrap-design-leather-skirt-item-31941708.aspx
+items,Dolce & Gabbana | 105mm ankle-strap leather sandals,https://www.farfetch.com/shopping/women/dolce-gabbana-105mm-ankle-strap-leather-sandals-item-30716799.aspx
+items,Prada | double-breasted coat,https://www.farfetch.com/shopping/women/prada-double-breasted-coat-item-31933736.aspx
+items,Valentino Garavani | Je Les V-Metal and crystal earrings,https://www.farfetch.com/shopping/women/valentino-garavani-je-les-v-metal-and-crystal-earrings-item-31092952.aspx
+items,PUCCI | wave-print turtleneck dress,https://www.farfetch.com/shopping/women/pucci-wave-print-turtleneck-dress-item-32094701.aspx
+items,Tory Burch | checked wool shirt,https://www.farfetch.com/shopping/women/tory-burch-checked-wool-shirt-item-31928223.aspx
+items,St. Agni | Bateau tote bag,https://www.farfetch.com/shopping/women/st-agni-bateau-tote-bag-item-31889128.aspx
+items,Polo Ralph Lauren | high-waisted trousers,https://www.farfetch.com/shopping/women/polo-ralph-lauren-high-waisted-trousers-item-32104233.aspx
+items,FENDI | logo-detail leather loafers,https://www.farfetch.com/shopping/women/fendi-logo-detail-leather-loafers-item-32083338.aspx
+items,AlaÃ¯a | Le Teckel clutch bag,https://www.farfetch.com/shopping/women/alaia-le-teckel-clutch-bag-item-31996982.aspx
+items,Prada | ribbed knit flared dress,https://www.farfetch.com/shopping/women/prada-ribbed-knit-flared-dress-item-31932753.aspx
+items,Valentino Garavani | 40mm VLogo Signature slingback pumps,https://www.farfetch.com/shopping/women/valentino-garavani-40mm-vlogo-signature-slingback-pumps-item-31994806.aspx
+items,ISABEL MARANT | polka-dot wrap dress,https://www.farfetch.com/shopping/women/isabel-marant-polka-dot-wrap-dress-item-29832684.aspx
+items,Aniye By | belted double-breasted leather coat,https://www.farfetch.com/shopping/women/aniye-by-belted-double-breasted-leather-coat-item-31999157.aspx
+items,PUMA | Speedcat Wild leopard sneakers,https://www.farfetch.com/shopping/women/puma-speedcat-wild-leopard-sneakers-item-32126557.aspx
+items,The Frankie Shop | Prescott elastic-cuff jacket,https://www.farfetch.com/shopping/women/the-frankie-shop-prescott-elastic-cuff-jacket-item-30749554.aspx
+items,Acne Studios | bow-detail flared trousers,https://www.farfetch.com/shopping/women/acne-studios-bow-detail-flared-trousers-item-29878850.aspx
+items,Acne Studios | textured denim jacket,https://www.farfetch.com/shopping/women/acne-studios-textured-denim-jacket-item-29879559.aspx
+items,Acne Studios | Camero leather shoulder bag,https://www.farfetch.com/shopping/women/acne-studios-camero-leather-shoulder-bag-item-29878767.aspx
+items,Acne Studios | textured jeans,https://www.farfetch.com/shopping/women/acne-studios-textured-jeans-item-29878769.aspx
+items,JW Anderson | suede ankle boots,https://www.farfetch.com/shopping/women/jw-anderson-suede-ankle-boots-item-31983803.aspx
+items,Acne Studios | bear-print slip dress,https://www.farfetch.com/shopping/women/acne-studios-bear-print-slip-dress-item-29878735.aspx
+items,Acne Studios | notepad-shaped earrings,https://www.farfetch.com/shopping/women/acne-studios-notepad-shaped-earrings-item-29878664.aspx
+items,Acne Studios | long-sleeve zipped top,https://www.farfetch.com/shopping/women/acne-studios-long-sleeve-zipped-top-item-29878822.aspx
+items,The Attico | Fay skirt,https://www.farfetch.com/shopping/women/the-attico-fay-skirt-item-32002494.aspx
+items,ChloÃ© | Paddington padlock studded tote bag,https://www.farfetch.com/shopping/women/chloe-paddington-padlock-studded-tote-bag-item-31306157.aspx
+items,Prada | herringbone fur-collar coat,https://www.farfetch.com/shopping/women/prada-herringbone-fur-collar-coat-item-31529025.aspx
+items,AlaÃ¯a | buckle cross-strap ballet flats,https://www.farfetch.com/shopping/women/alaia-buckle-cross-strap-ballet-flats-item-30220143.aspx
+items,Miu Miu | SablÃ© shoulder-strap smocked dress,https://www.farfetch.com/shopping/women/miu-miu-sable-shoulder-strap-smocked-dress-item-32060989.aspx
+items,TOTEME | single-button cape blazer,https://www.farfetch.com/shopping/women/toteme-single-button-cape-blazer-item-30926093.aspx
+items,DeMellier | New York tote bag,https://www.farfetch.com/shopping/women/demellier-new-york-tote-bag-item-30197050.aspx
+items,TOTEME | Slouch zip-front draped blouse,https://www.farfetch.com/shopping/women/toteme-slouch-zip-front-draped-blouse-item-30925077.aspx
+items,TOTEME | dart-detail trousers,https://www.farfetch.com/shopping/women/toteme-dart-detail-trousers-item-30926080.aspx
+items,LEMAIRE | suede leather zip shoulder bag,https://www.farfetch.com/shopping/women/lemaire-suede-leather-zip-shoulder-bag-item-32003509.aspx
+items,STAND STUDIO | Biba coat,https://www.farfetch.com/shopping/women/stand-studio-biba-coat-item-31992868.aspx
+items,The Attico | leather heeled mules,https://www.farfetch.com/shopping/women/the-attico-leather-heeled-mules-item-32002483.aspx
+items,PUCCI | wave-print long-sleeve dress,https://www.farfetch.com/shopping/women/pucci-wave-print-long-sleeve-dress-item-32093750.aspx
+items,Prada | embroidered silk midi dress,https://www.farfetch.com/shopping/women/prada-embroidered-silk-midi-dress-item-32043659.aspx
+items,Miu Miu | matelassÃ© drawstring mini bag,https://www.farfetch.com/shopping/women/miu-miu-matelasse-drawstring-mini-bag-item-32098662.aspx
+items,Prada | three-button flap-pocket jacket,https://www.farfetch.com/shopping/women/prada-three-button-flap-pocket-jacket-item-31932748.aspx
+items,Prada | floral print silk dress,https://www.farfetch.com/shopping/women/prada-floral-print-silk-dress-item-31933731.aspx
+items,KHAITE | Simona shoulder bag,https://www.farfetch.com/shopping/women/khaite-simona-shoulder-bag-item-31948171.aspx
+items,ISABEL MARANT | Hilda sequin long-sleeve top,https://www.farfetch.com/shopping/women/isabel-marant-hilda-sequin-long-sleeve-top-item-29832800.aspx

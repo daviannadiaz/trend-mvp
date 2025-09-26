@@ -1,0 +1,102 @@
+section,metric,value
+summary,total_items,50
+top_words,con,34
+top_words,zapatillas,7
+top_words,tac,6
+top_words,bolso,5
+top_words,vestido,5
+top_words,piel,5
+top_words,valentino,5
+top_words,garavani,5
+top_words,vans,5
+top_words,midi,4
+top_words,cuadros,4
+top_words,estampado,4
+top_words,falda,3
+top_words,chaqueta,3
+top_words,pantalones,3
+top_words,cintur,3
+top_words,ajedrezado,3
+top_words,detalles,3
+top_words,cuello,2
+top_words,abrigo,2
+top_bigrams,con tac,5
+top_bigrams,valentino garavani,5
+top_bigrams,garavani vans,5
+top_bigrams,con estampado,4
+top_bigrams,falda midi,3
+top_bigrams,piel con,3
+top_bigrams,ajedrezado valentino,3
+top_bigrams,con detalles,3
+top_bigrams,abrigo con,2
+top_bigrams,con botones,2
+top_bigrams,vlogo con,2
+top_bigrams,con motivo,2
+top_bigrams,motivo ajedrezado,2
+top_bigrams,zapatillas con,2
+top_bigrams,doble botonadura,2
+top_bigrams,detalles cristal,2
+top_bigrams,con flecos,2
+top_bigrams,bolso shopper,2
+top_bigrams,con cintur,2
+top_bigrams,colt con,2
+top_designers,Valentino Garavani,7
+top_designers,KHAITE,7
+top_designers,Jacquemus,3
+top_designers,LouLou de Saison,3
+top_designers,Acne Studios,3
+top_designers,DÃEN,2
+top_designers,Max Mara,2
+top_designers,AlaÃ¯a,2
+top_designers,Nanushka,1
+top_designers,Aeyde,1
+items,Nanushka | jersey Maxe con cuello peregrino,https://www.farfetch.com/es/shopping/women/nanushka-jersey-maxe-con-cuello-peregrino-item-30463550.aspx
+items,Jacquemus | bolso The Small Calino with knots mini,https://www.farfetch.com/es/shopping/women/jacquemus-bolso-the-small-calino-with-knots-mini-item-32167808.aspx
+items,DÃEN | falda midi Saskia a cuadros,https://www.farfetch.com/es/shopping/women/doen-falda-midi-saskia-a-cuadros-item-30447214.aspx
+items,Aeyde | botas Medea con tacÃ³n de 40 mm,https://www.farfetch.com/es/shopping/women/aeyde-botas-medea-con-tacon-de-40-mm-item-31887532.aspx
+items,RÃ³he | abrigo con botones,https://www.farfetch.com/es/shopping/women/rohe-abrigo-con-botones-item-32032549.aspx
+items,Valentino Garavani | zapatos Valet du Roi con tacÃ³n de 60 mm,https://www.farfetch.com/es/shopping/women/valentino-garavani-zapatos-valet-du-roi-con-tacon-de-60-mm-item-32125239.aspx
+items,Ralph Lauren RRL | chaqueta vaquera con diseÃ±o cruzado,https://www.farfetch.com/es/shopping/women/ralph-lauren-rrl-chaqueta-vaquera-con-diseno-cruzado-item-31033527.aspx
+items,KHAITE | pantalones rectos de lana,https://www.farfetch.com/es/shopping/women/khaite-pantalones-rectos-de-lana-item-31948163.aspx
+items,The Row | bolso cilÃ­ndrico con asa,https://www.farfetch.com/es/shopping/women/the-row-bolso-cilindrico-con-asa-item-32019716.aspx
+items,KHAITE | vestido corto con estampado de leopardo,https://www.farfetch.com/es/shopping/women/khaite-vestido-corto-con-estampado-de-leopardo-item-32171214.aspx
+items,Saint Laurent | mocasines de piel con placa del logo,https://www.farfetch.com/es/shopping/women/saint-laurent-mocasines-de-piel-con-placa-del-logo-item-32043126.aspx
+items,Max Mara | vestido midi con hombros descubiertos,https://www.farfetch.com/es/shopping/women/max-mara-vestido-midi-con-hombros-descubiertos-item-31707888.aspx
+items,ANINE BING | camiseta con estampado grÃ¡fico,https://www.farfetch.com/es/shopping/women/anine-bing-camiseta-con-estampado-grafico-item-32118000.aspx
+items,The Frankie Shop | cinturÃ³n de piel con apliques,https://www.farfetch.com/es/shopping/women/the-frankie-shop-cinturon-de-piel-con-apliques-item-32092629.aspx
+items,AlaÃ¯a | vaqueros a paneles,https://www.farfetch.com/es/shopping/women/alaia-vaqueros-a-paneles-item-32020731.aspx
+items,Valentino Garavani | zapatillas a cuadros de Valentino Garavani x Vans,https://www.farfetch.com/es/shopping/women/valentino-garavani-zapatillas-a-cuadros-de-valentino-garavani-x-vans-item-31993241.aspx
+items,Valentino Garavani | zapatillas VLogo con motivo ajedrezado de Valentino Garavani x Vans,https://www.farfetch.com/es/shopping/women/valentino-garavani-zapatillas-vlogo-con-motivo-ajedrezado-de-valentino-garavani-x-vans-item-31682252.aspx
+items,Valentino Garavani | zapatillas con estampado Love de Valentino Garavani x Vans,https://www.farfetch.com/es/shopping/women/valentino-garavani-zapatillas-con-estampado-love-de-valentino-garavani-x-vans-item-31680923.aspx
+items,Valentino Garavani | zapatillas con motivo ajedrezado de Valentino Garavani x Vans,https://www.farfetch.com/es/shopping/women/valentino-garavani-zapatillas-con-motivo-ajedrezado-de-valentino-garavani-x-vans-item-31680972.aspx
+items,Valentino Garavani | zapatillas bajas VLogo con estampado ajedrezado de Valentino Garavani x Vans,https://www.farfetch.com/es/shopping/women/valentino-garavani-zapatillas-bajas-vlogo-con-estampado-ajedrezado-de-valentino-garavani-x-vans-item-31679945.aspx
+items,ISABEL MARANT | chaqueta de piel,https://www.farfetch.com/es/shopping/women/isabel-marant-chaqueta-de-piel-item-32027683.aspx
+items,KHAITE | bandolera Blake de piel,https://www.farfetch.com/es/shopping/women/khaite-bandolera-blake-de-piel-item-32170760.aspx
+items,LouLou de Saison | falda midi Jil asimÃ©trica,https://www.farfetch.com/es/shopping/women/loulou-de-saison-falda-midi-jil-asimetrica-item-31714284.aspx
+items,KHAITE | 45mm Jett D'Orsay heeled pumps,https://www.farfetch.com/es/shopping/women/khaite-45mm-jett-dorsay-heeled-pumps-item-32171288.aspx
+items,Ferragamo | reloj Gancini Twisted de 28 mm,https://www.farfetch.com/es/shopping/women/ferragamo-reloj-gancini-twisted-de-28-mm-item-30856518.aspx
+items,Max Mara | chaleco de pelo con doble botonadura,https://www.farfetch.com/es/shopping/women/max-mara-chaleco-de-pelo-con-doble-botonadura-item-32004011.aspx
+items,Amina Muaddi | zapatos Camelia de tacÃ³n con detalles de cristal,https://www.farfetch.com/es/shopping/women/amina-muaddi-zapatos-camelia-de-tacon-con-detalles-de-cristal-item-32088864.aspx
+items,Acne Studios | vestido drapeado con flecos,https://www.farfetch.com/es/shopping/women/acne-studios-vestido-drapeado-con-flecos-item-29879534.aspx
+items,Guest In Residence | sobrecamisa acolchada a cuadros,https://www.farfetch.com/es/shopping/women/guest-in-residence-sobrecamisa-acolchada-a-cuadros-item-30892202.aspx
+items,Zadig&Voltaire | bolso shopper con detalle curvo,https://www.farfetch.com/es/shopping/women/zadigvoltaire-bolso-shopper-con-detalle-curvo-item-31579718.aspx
+items,OUR LEGACY | vaqueros con detalles rasgados,https://www.farfetch.com/es/shopping/women/our-legacy-vaqueros-con-detalles-rasgados-item-31981966.aspx
+items,Maison Margiela | zapatillas Metallic con paneles,https://www.farfetch.com/es/shopping/women/maison-margiela-zapatillas-metallic-con-paneles-item-30391006.aspx
+items,Jacquemus | gabardina con cinturÃ³n,https://www.farfetch.com/es/shopping/women/jacquemus-gabardina-con-cinturon-item-30656772.aspx
+items,KHAITE | botines Colt con cremallera,https://www.farfetch.com/es/shopping/women/khaite-botines-colt-con-cremallera-item-29944522.aspx
+items,AMI Paris | chaqueta con botones,https://www.farfetch.com/es/shopping/women/ami-paris-chaqueta-con-botones-item-30650912.aspx
+items,LouLou de Saison | pantalones anchos con pinzas,https://www.farfetch.com/es/shopping/women/loulou-de-saison-pantalones-anchos-con-pinzas-item-32103456.aspx
+items,Valentino Garavani | pendientes Coeur Royal con detalles de cristal,https://www.farfetch.com/es/shopping/women/valentino-garavani-pendientes-coeur-royal-con-detalles-de-cristal-item-31094008.aspx
+items,16Arlington | vestido de fiesta Zegli con lentejuelas,https://www.farfetch.com/es/shopping/women/16arlington-vestido-de-fiesta-zegli-con-lentejuelas-item-31859087.aspx
+items,KHAITE | sandalias Loulou con tacÃ³n de 750 mm,https://www.farfetch.com/es/shopping/women/khaite-sandalias-loulou-con-tacon-de-750-mm-item-29943879.aspx
+items,DÃEN | vestido largo Maxime a cuadros,https://www.farfetch.com/es/shopping/women/doen-vestido-largo-maxime-a-cuadros-item-30447202.aspx
+items,LEMAIRE | chaleco de punto con lazo en el cuello,https://www.farfetch.com/es/shopping/women/lemaire-chaleco-de-punto-con-lazo-en-el-cuello-item-30580638.aspx
+items,Acne Studios | bolso de hombro con volantes y cordones,https://www.farfetch.com/es/shopping/women/acne-studios-bolso-de-hombro-con-volantes-y-cordones-item-29878750.aspx
+items,Acne Studios | pantalones acampanados y detalle de lazo,https://www.farfetch.com/es/shopping/women/acne-studios-pantalones-acampanados-y-detalle-de-lazo-item-29878851.aspx
+items,KHAITE | mules Colt con tacÃ³n de 100 mm,https://www.farfetch.com/es/shopping/women/khaite-mules-colt-con-tacon-de-100-mm-item-32170850.aspx
+items,Jacquemus | polo de lana merino,https://www.farfetch.com/es/shopping/women/jacquemus-polo-de-lana-merino-item-31997237.aspx
+items,LOEWE | bolso shopper Puzzle con flecos de Loewe x Albers,https://www.farfetch.com/es/shopping/women/loewe-bolso-shopper-puzzle-con-flecos-de-loewe-x-albers-item-31940752.aspx
+items,LouLou de Saison | falda midi MASON a rayas diplomÃ¡ticas,https://www.farfetch.com/es/shopping/women/loulou-de-saison-falda-midi-mason-a-rayas-diplomaticas-item-31715342.aspx
+items,AlaÃ¯a | sandalias de piel con tacÃ³n de 90 mm,https://www.farfetch.com/es/shopping/women/alaia-sandalias-de-piel-con-tacon-de-90-mm-item-31747463.aspx
+items,Sportmax | abrigo con cinturÃ³n y doble botonadura,https://www.farfetch.com/es/shopping/women/sportmax-abrigo-con-cinturon-y-doble-botonadura-item-32011345.aspx
+items,PUMA | bailarinas estilo zapatillas Speedcat,https://www.farfetch.com/es/shopping/women/puma-bailarinas-estilo-zapatillas-speedcat-item-32125719.aspx

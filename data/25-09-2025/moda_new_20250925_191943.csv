@@ -1,0 +1,102 @@
+section,metric,value
+summary,total_items,50
+top_words,dress,14
+top_words,maxi,10
+top_words,jacket,9
+top_words,mini,6
+top_words,cotton,6
+top_words,wool,5
+top_words,blend,5
+top_words,skirt,5
+top_words,exclusive,5
+top_words,fringed,5
+top_words,leather,5
+top_words,pants,4
+top_words,silk,4
+top_words,gown,3
+top_words,necklace,3
+top_words,shearling,2
+top_words,strapless,2
+top_words,draped,2
+top_words,embellished,2
+top_words,modal,2
+top_bigrams,maxi dress,6
+top_bigrams,mini dress,5
+top_bigrams,maxi skirt,3
+top_bigrams,leather jacket,3
+top_bigrams,modal blend,2
+top_bigrams,silk gown,2
+top_bigrams,ribbon fringed,2
+top_bigrams,fringed wool,2
+top_bigrams,wool jacket,2
+top_bigrams,theo shearling,1
+top_bigrams,shearling loafer,1
+top_bigrams,loafer mules,1
+top_bigrams,floret strapless,1
+top_bigrams,strapless mini,1
+top_bigrams,jaclyn draped,1
+top_bigrams,draped gown,1
+top_bigrams,patsy embellished,1
+top_bigrams,embellished mini,1
+top_bigrams,cosmos fleur,1
+top_bigrams,fleur yellow,1
+top_designers,Leo Lin,5
+top_designers,Oscar de la Renta,4
+top_designers,By Malene Birger,3
+top_designers,Chloé,3
+top_designers,KALLMEYER,3
+top_designers,LoveShackFancy,3
+top_designers,Isabel Marant,2
+top_designers,St. Agni,2
+top_designers,Lizzie Fortunato,2
+top_designers,FFORME,2
+items,Black Suede Studio | Theo Shearling Loafer Mules,https://www.modaoperandi.com/women/p/black-suede-studio/theo-loafer/713977
+items,Leo Lin | Floret Strapless Mini Dress,https://www.modaoperandi.com/women/p/leo-lin/floret-strapless-mini-dress/713649
+items,Leo Lin | Jaclyn Draped Gown,https://www.modaoperandi.com/women/p/leo-lin/jaclyn-draped-gown-2/713655
+items,Leo Lin | Patsy Embellished Mini Dress,https://www.modaoperandi.com/women/p/leo-lin/patsy-embellished-mini-dress/713650
+items,Sophie Bille Brahe | Cosmos Fleur 18K Yellow Gold Diamond Ring,https://www.modaoperandi.com/women/p/sophie-bille-brahe/cosmos-fleur/711171
+items,Marlies Grace | Olivia Wool-Blend Maxi Column Skirt,https://www.modaoperandi.com/women/p/marlies-grace/olivia-skirt/690187
+items,Isabel Marant | Inaya Pleated Modal-Blend Pants,https://www.modaoperandi.com/women/p/isabel-marant/inaya-gb/706680
+items,Leo Lin | Rayna Appliquéd Maxi Dress,https://www.modaoperandi.com/women/p/leo-lin/rayna-appliqued-maxi-dress/713647
+items,Isabel Marant | Gwenola Modal-Blend Jacket,https://www.modaoperandi.com/women/p/isabel-marant/gwenola-gb/706678
+items,Leo Lin | Yumei Open-Back Silk Gown,https://www.modaoperandi.com/women/p/leo-lin/yumei-open-back-silk-gown/713644
+items,St. Agni | Exclusive Dip-Dyed Silk Maxi Skirt,https://www.modaoperandi.com/women/p/st-agni/dip-dye-skirt-exclusive/696369
+items,Le Sundial | The Eclipse Necklace,https://www.modaoperandi.com/women/p/le-sundial/the-ivory-eclipse-pendant-necklace/698961
+items,By Malene Birger | Pinla Fringed Cape Top,https://www.modaoperandi.com/women/p/by-malene-birger/pinla-fringes/712943
+items,Lizzie Fortunato | Gala Sequined Bag,https://www.modaoperandi.com/women/p/lizzie-fortunato/gala-bag-in-soleil/703303
+items,Chloé | Paddington Leather Shoulder Bag,https://www.modaoperandi.com/women/p/chloe/paddington-grained-leather-shoulder-bag/693026
+items,Agolde | Rubik Leather Jacket,https://www.modaoperandi.com/women/p/agolde/leather-rubik-jacket/702488
+items,SLVRLAKE | Casey Square Cotton Worker Jacket,https://www.modaoperandi.com/women/p/slvrlake/casey-square-worker/685349
+items,Khaite | Anders Argyle-Knit Cashmere-Blend Top,https://www.modaoperandi.com/women/p/khaite/anders-argyle-cashmere-blend-top/687736
+items,FFORME | Nova Ribbon-Fringed Wool Sweater,https://www.modaoperandi.com/women/p/fforme/nova-ribbed-sweater/689513
+items,FFORME | Riley Ribbon-Fringed Wool Maxi Skirt,https://www.modaoperandi.com/women/p/fforme/riley-ribbed-maxi-skirt/689514
+items,Barrie | Cotton-Cashmere Cardigan,https://www.modaoperandi.com/women/p/barrie/cotton-cashmere-cardigan/713018
+items,S.S.DALEY | Willow Slip Dress,https://www.modaoperandi.com/women/p/s-s-daley/willow-slip-dress/694096
+items,Brandon Maxwell | The Isadora  Knot-Detailed Draped Maxi Dress,https://www.modaoperandi.com/women/p/brandon-maxwell/the-isadora-knot-detailed-draped-maxi-dress/714678
+items,Chloé | Chloé Elixir Coin Pendant Necklace,https://www.modaoperandi.com/women/p/chloe/jn33/695047
+items,Posse | Exclusive Harlan Knit Jacket,https://www.modaoperandi.com/women/p/posse/exclusive-harlan-jacket-1/709388
+items,St. Agni | Fawn Minimal Patterned Leather Jacket,https://www.modaoperandi.com/women/p/st-agni/fawn-minimal-patterned-leather-jacket/713370
+items,By Malene Birger | Vera Lace-Detailed Slip Midi Dress,https://www.modaoperandi.com/women/p/by-malene-birger/vera-2/712990
+items,BEVZA | Maryna Fringed Crepe Maxi Dress,https://www.modaoperandi.com/women/p/bevza/maryna-dress/695981
+items,Chloé | Cropped Shearling-Trimmed Leather Jacket,https://www.modaoperandi.com/women/p/chloe/cropped-shearling-trimmed-leather-jacket/693104
+items,ARMA | Exclusive Kerry Cropped Wool Jacket,https://www.modaoperandi.com/women/p/arma/kerry-100-wool/695457
+items,Oscar de la Renta | Tassel Drop Earrings,https://www.modaoperandi.com/women/p/oscar-de-la-renta/tassel-drop-earrings/714104
+items,Oscar de la Renta | Fringed Strapless Silk Gown,https://www.modaoperandi.com/women/p/oscar-de-la-renta/fringed-strapless-silk-gown/714146
+items,The Row | Violetta Silk Dress,https://www.modaoperandi.com/women/p/the-row/violetta-dress/674749
+items,De La Vali | Exclusive Pampero Twill Mini Dress,https://www.modaoperandi.com/women/p/de-la-vali/pampero-mini-dress-twill/694249
+items,Oscar de la Renta | Embellished Stretch-Wool Jacket,https://www.modaoperandi.com/women/p/oscar-de-la-renta/embellished-stretch-wool-jacket/714151
+items,Matteau | Shirred-Waist Cotton Mini Dress,https://www.modaoperandi.com/women/p/matteau-swim/shirred-waist-mini-dress/701111
+items,Oscar de la Renta | Porcelain Flowers Guipure Maxi Dress,https://www.modaoperandi.com/women/p/oscar-de-la-renta/porcelain-flowers-guipure-maxi-dress/714124
+items,LUCASHEVA | Exclusive Barbara Leather Pumps,https://www.modaoperandi.com/women/p/lucasheva/exclsuive-barbara/689251
+items,Lizzie Fortunato | Coquina Necklace,https://www.modaoperandi.com/women/p/lizzie-fortunato/coquina-necklace/713913
+items,KALLMEYER | Freja Floral Maxi Skirt,https://www.modaoperandi.com/women/p/kallmeyer-2/freja-floral-maxi-skirt/716481
+items,LoveShackFancy | Leda Cutout Cardigan,https://www.modaoperandi.com/women/p/love-shack-fancy/leda-cutout-cardigan/715874
+items,LaQuan Smith | Low-Rise Cigarette Pants,https://www.modaoperandi.com/women/p/laquan-smith/low-rise-cigarette-pants/716278
+items,KALLMEYER | James Cotton Jacket,https://www.modaoperandi.com/women/p/kallmeyer-2/james-cotton-jacket/716437
+items,Antonio Grimaldi | Anita Cady Straight-Leg Pants,https://www.modaoperandi.com/women/p/antonio-grimaldi/anita-cady-straight-leg-pants-4/716084
+items,LaQuan Smith | Belted Cotton-Blend Mini Skirt,https://www.modaoperandi.com/women/p/laquan-smith/belted-cotton-blend-mini-skirt/716307
+items,LoveShackFancy | Rialto Ruffled Maxi Dress,https://www.modaoperandi.com/women/p/love-shack-fancy/rialto-ruffled-maxi-dress/715872
+items,KALLMEYER | Wesley Cotton Drawstring Pants,https://www.modaoperandi.com/women/p/kallmeyer-2/wesley-cotton-drawstring-pants/716438
+items,LoveShackFancy | Elka Cutout Mini Dress,https://www.modaoperandi.com/women/p/love-shack-fancy/elka-cutout-mini-dress/715875
+items,Antonio Grimaldi | Adele Cutaway Cady Maxi Dress,https://www.modaoperandi.com/women/p/antonio-grimaldi/adele-cutaway-cady-maxi-dress/716069
+items,By Malene Birger | Eri Lace Shorts,https://www.modaoperandi.com/women/p/by-malene-birger/eri/712986

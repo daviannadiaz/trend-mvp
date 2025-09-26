@@ -1,6 +1,6 @@
 # scripts/calc_trend_scores.py
 """
-Calculate weekly Trend Scores for each topic.
+Calculate weekly Trend Scores for each topic across *all* history.
 
 Outputs:
  - data/trend_scores_<timestamp>.csv  (timestamped snapshot)
@@ -14,41 +14,53 @@ import numpy as np
 from urllib.parse import urlparse
 from sklearn.preprocessing import MinMaxScaler
 
-# ---------- Helper: find the latest clustered CSV ----------
-def find_latest_clustered():
-    files = sorted(glob.glob("data/rss_results_clustered_*.csv"))
-    if not files:
-        raise FileNotFoundError("No timestamped clustered CSV found. Run cluster_topics.py first.")
-    return files[-1]
+# ---------- Load all clustered CSVs ----------
+files = sorted(glob.glob("data/rss_results_clustered_*.csv"))
+if not files:
+    raise FileNotFoundError("No clustered CSVs found. Run cluster_topics.py first.")
 
-source_file = find_latest_clustered()
-print("Using source:", source_file)
+print(f"Found {len(files)} clustered files.")
+dfs = []
+for f in files:
+    try:
+        df_tmp = pd.read_csv(f, low_memory=False)
+        df_tmp['__source_file'] = os.path.basename(f)  # track origin
+        dfs.append(df_tmp)
+    except Exception as e:
+        print(f"⚠️ Skipping {f}: {e}")
 
-# ---------- Load data ----------
-df = pd.read_csv(source_file, low_memory=False)
+df = pd.concat(dfs, ignore_index=True)
 
-# Ensure ingested_at exists and is parsed
+# ---------- Ensure ingested_at exists ----------
 if 'ingested_at' not in df.columns:
-    raise KeyError("'ingested_at' column not found. Make sure your ingest + cleaning pipeline preserved it.")
+    raise KeyError("'ingested_at' column not found. Make sure ingest + cleaning pipeline preserved it.")
 
 df['ingested_at'] = pd.to_datetime(df['ingested_at'], utc=True, errors='coerce')
-if df['ingested_at'].isna().all():
-    raise ValueError("ingested_at column could not be parsed as datetimes. Check its format.")
+df = df.dropna(subset=['ingested_at'])
 
-# If 'topic' is not numeric, keep as string (BERTopic gives ints)
+# Deduplicate by link + title + topic
+if 'link' in df.columns:
+    df = df.drop_duplicates(subset=['link','title','topic'], keep='last')
+
+# Ensure topic is string
 df['topic'] = df['topic'].astype(str)
 
-# ---------- Ensure there is a source/domain column ----------
+# ---------- Ensure source column ----------
 if 'source' not in df.columns and 'link' in df.columns:
-    df['source'] = df['link'].fillna("").apply(lambda u: urlparse(u).netloc.lower().replace('www.', '') if pd.notna(u) and u else "")
+    df['source'] = df['link'].fillna("").apply(
+        lambda u: urlparse(u).netloc.lower().replace('www.', '') if pd.notna(u) and u else ""
+    )
 elif 'source' not in df.columns:
     df['source'] = "unknown"
 
 # ---------- Define time bins (weeks) ----------
 df['year_week'] = df['ingested_at'].dt.strftime('%Y-%W')  # ISO week
-N_WEEKS = 4
+N_WEEKS = 6  # keep last 6 weeks history
 all_weeks = sorted(df['year_week'].dropna().unique())
 recent_weeks = all_weeks[-N_WEEKS:]
+
+print("\n🔎 Distinct weeks in dataset:")
+print(df['year_week'].value_counts())
 print("Weeks considered (up to last N):", recent_weeks)
 
 # ---------- Aggregate mentions ----------
@@ -87,28 +99,25 @@ for topic in topics:
 metrics_df = pd.DataFrame(rows)
 
 # ---------- Normalize metrics ----------
-norm_cols = ['velocity', 'recency', 'source_count']
 v = np.clip(metrics_df['velocity'].fillna(0).values.reshape(-1,1), -5, 5)
 v_shifted = v - v.min()
 r = metrics_df['recency'].fillna(0).values.reshape(-1,1)
 s = metrics_df['source_count'].fillna(0).values.reshape(-1,1)
 
 scaler = MinMaxScaler()
-v_norm = scaler.fit_transform(v_shifted)
-r_norm = scaler.fit_transform(r)
-s_norm = scaler.fit_transform(s)
-
-metrics_df['velocity_norm'] = v_norm.flatten()
-metrics_df['recency_norm'] = r_norm.flatten()
-metrics_df['source_norm'] = s_norm.flatten()
+metrics_df['velocity_norm'] = scaler.fit_transform(v_shifted).flatten()
+metrics_df['recency_norm'] = scaler.fit_transform(r).flatten()
+metrics_df['source_norm'] = scaler.fit_transform(s).flatten()
 
 # ---------- Combine into Trend Score ----------
 W_V, W_R, W_S = 0.4, 0.3, 0.3
-metrics_df['trend_score'] = (W_V * metrics_df['velocity_norm'] + 
-                             W_R * metrics_df['recency_norm'] +
-                             W_S * metrics_df['source_norm']) * 100
+metrics_df['trend_score'] = (
+    W_V * metrics_df['velocity_norm'] +
+    W_R * metrics_df['recency_norm'] +
+    W_S * metrics_df['source_norm']
+) * 100
 
-# Compute delta vs previous
+# ---------- Compare to previous snapshot ----------
 latest_path = "data/trend_scores_latest.csv"
 if os.path.exists(latest_path):
     prev = pd.read_csv(latest_path).set_index('topic')['trend_score'].to_dict()
@@ -118,12 +127,13 @@ else:
     metrics_df['score_prev'] = np.nan
     metrics_df['score_delta'] = np.nan
 
-# ---------- Save outputs (timestamped + latest) ----------
+# ---------- Save outputs ----------
 os.makedirs("data", exist_ok=True)
 ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
-metrics_df.to_csv(f"data/trend_scores_{ts}.csv", index=False)
+out_file = f"data/trend_scores_{ts}.csv"
+metrics_df.to_csv(out_file, index=False)
 metrics_df.to_csv(latest_path, index=False)
-print(f"✅ Saved trend scores: data/trend_scores_{ts}.csv and latest snapshot: {latest_path}")
+print(f"\n✅ Saved trend scores: {out_file} and {latest_path}")
 
 # ---------- Quick terminal check ----------
 print("\nTop 10 topics by trend_score:")
